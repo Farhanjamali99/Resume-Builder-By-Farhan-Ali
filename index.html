@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Resume Builder</h1>
+    </header>
+
+    <section id="resume-form">
+        <h2>Personal Information</h2>
+        <label>Name: <input type="text" id="name"></label><br>
+        <label>Email: <input type="email" id="email"></label><br>
+        <label>Phone: <input type="text" id="phone"></label>
+
+        <h2>Education</h2>
+        <div id="education-section">
+            <!-- Education entries will be added here dynamically -->
+        </div>
+        <button type="button" onclick="addEducation()">Add Education</button>
+
+        <h2>Experience</h2>
+        <div id="experience-section">
+            <!-- Experience entries will be added here dynamically -->
+        </div>
+        <button type="button" onclick="addExperience()">Add Experience</button>
+
+        <h2>Skills</h2>
+        <div id="skills-section">
+            <!-- Skills entries will be added here dynamically -->
+        </div>
+        <button type="button" onclick="addSkill()">Add Skill</button>
+
+        <button onclick="generateResume()">Generate Resume</button>
+    </section>
+
+    <section id="generated-resume">
+        <h2>Your Resume</h2>
+        <div id="personal-info-output" contenteditable="true"></div>
+        <div id="education-output" contenteditable="true"></div>
+        <div id="experience-output" contenteditable="true"></div>
+        <div id="skills-output" contenteditable="true"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
